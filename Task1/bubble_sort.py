@@ -1,5 +1,5 @@
-# 将冒泡排序改造成类和函数来实现
-class BubbleSort():
+# 将冒泡排序改造成类和函数来实现,定义类，类名之后的括号可有可无
+class BubbleSort:
     # 定义函数，记得一定要加self这个参数，否则无法被调用
     def bubble_sort(self,list_a):
         # 定义排序次数变量：i
@@ -15,9 +15,10 @@ class BubbleSort():
                     list_a[j], list_a[j + 1] = list_a[j + 1], list_a[j]
         # return确定返回值
         return list_a
-# 实例化类
+# 调用类的时候需要给类实例化（实例化类名后面必须加括号），定义一个实例化变量B
 B = BubbleSort()
 # 使用关键字传参
 list_a = [3, 22, 98, 14, 64, 1, 50, 7, 33]
+# 打印出排序结果
 print(B.bubble_sort(list_a))
 #B.bubble_sort(list_a)
