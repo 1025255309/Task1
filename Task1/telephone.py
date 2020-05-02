@@ -47,5 +47,5 @@ mi_phone.take_photo()
 mi_phone.charge()
 # 注意外部无法调用私有变量，mi_phone.__cardslot就会失败，在类方法中调用后可以正确打印
 mi_phone.scan_payment()
-# 注意调用私有方法需要_类名_私有方法名（），相当于指定门牌号,名字重写
+# 通过name重写的方法可以调用私有属性，注意格式:对象._类名_私有方法名（），相当于指定门牌号,但是不建议这样使用，私有就是不想让人调用的
 mi_phone._Telephone__play_when_charge()
