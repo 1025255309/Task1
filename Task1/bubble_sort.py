@@ -1,7 +1,9 @@
+"""
+作业1：冒泡排序每一行都加注释说明
+"""
 # 将冒泡排序改造成类和函数来实现,定义类，类名之后的括号可有可无
 class BubbleSort:
     # 定义函数，记得一定要加self这个参数，否则无法被调用
-
     def bubble_sort(self,list_a):
         # 定义排序次数变量：i
         for i in range(1, len(list_a)):
