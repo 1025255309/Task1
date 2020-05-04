@@ -1,11 +1,13 @@
 """
-作业三：
+作业3：
 1.定义一个天山童姥类 ，类名为TongLao，属性有血量，武力值（通过传入的参数得到）。TongLao类里面有2个方法，
 2.see_people方法，需要传入一个name参数，如果传入”WYZ”（无崖子），则打印，“师弟！！！！”，如果传入“李秋水”，打印“呸，贱人”，如果传入“丁春秋”，打印“叛徒！我杀了你”
 3.fight_zms方法（天山折梅手），调用天山折梅手方法会将自己的武力值提升10倍，血量缩减2倍。需要传入敌人的hp，power，进行一回合制对打，打完之后，比较双方血量。血多的一方获胜。
 4.定义一个XuZhu类，继承于童姥。虚竹宅心仁厚不想打架。所以虚竹只有一个read（念经）的方法。每次调用都会打印“罪过罪过”
 5.加入模块化改造
 """
+
+
 class TongLao:  # 定义童姥类
     def __init__(self, hp, power):  # 使用构造函数初始化类，同时传两个参数血量hp和武力值power
         self.hp = hp
@@ -34,11 +36,13 @@ class TongLao:  # 定义童姥类
             print("没想到你小子还真有两下子")
         else:
             print("今天状态不好，竟然输给这个臭小子")
-            self.__run()
+            self.__run()  # 通过self调用同类中私有属性
+
 
 class XuZhu(TongLao):  # 定义虚竹类，继承于天山童姥类
     def read(self):  # 定义一个念经的方法
         print("罪过罪过")
+
 
 tianshantonglao = TongLao(1000, 10)  # 实例化一个天山童姥，并传参血量和武力值
 tianshantonglao.see_people("丁春秋")  # 调用实例化see_people方法，并传参
