@@ -23,9 +23,9 @@ class BubbleSort:
 
 
 # 调用类的时候需要给类实例化，实例化类名后面必须加括号,不加括号代表只是将类赋给了变量
-B = BubbleSort()
+b = BubbleSort()
 # 使用关键字传参
 list_a = [3, 22, 98, 14, 64, 1, 50, 7, 33]
 # 打印出排序后的list_a
-print("list_a=", B.bubble_sort(list_a))
-# B.bubble_sort(list_a)
+print("list_a=", b.bubble_sort(list_a))
+# b.bubble_sort(list_a)
