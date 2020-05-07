@@ -49,5 +49,5 @@ tianshantonglao.see_people("丁春秋")  # 调用实例化see_people方法，并
 tianshantonglao.fight_zms(1000, 100)  # 调用实例化fight_zms方法，并传参
 xuzhu = XuZhu  # 将虚竹类赋给变量xuzhu
 print(xuzhu.read)  # 直接调用类read方法
-x = XuZhu(500, 10)  # 实例化一个虚竹类为对象x
+x = XuZhu(500, 10)  # 实例化一个虚竹类为对象x,同时传2个参数
 x.read()  # 调用实例化对象x的read方法
