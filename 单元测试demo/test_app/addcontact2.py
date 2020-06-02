@@ -53,7 +53,6 @@ class TestContact:
         el4 = self.driver.find_element(MobileBy.XPATH, '//*[contains(@text,"姓名")]/..//*[@text="必填"]')
         el4.send_keys(username)
         # 定位姓别并点击选择对应的性别
-        # gendor = '女'
         el5 = self.driver.find_element(MobileBy.XPATH, '//*[contains(@text,"男")]')
         el5.click()
         self.driver.find_element(MobileBy.XPATH,f"//*[contains(@text,'{gendor}')]").click()
