@@ -10,7 +10,7 @@ class App(BasePage):
     driver: WebDriver
     def start(self):
         # 加上判断就可以复用启动
-        if self._driver == None:
+        if self.driver == None:
             desired_caps = {}
             desired_caps['platformName'] = 'Android'
             desired_caps['platformVersion'] = '6.0'
@@ -23,7 +23,7 @@ class App(BasePage):
         else:
             self.driver.launch_app()  # driver.launch_app默认会启动desired_capabalities中设定的应用
 
-        self.driver.implicitly_wait(10)
+        self.driver.implicitly_wait(20)
         return self
     def restart(self):
         pass
