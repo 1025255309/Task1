@@ -16,7 +16,7 @@ class TestToken:
     def test_token(self):
         corpid = "ww2e51e84799d1f6f7"
         corpsecret = "xMZ8h3PCTOGFp9TtjvWWfqtX--uwTdCPVcSmzRqRMn8"
-        # 使用f可以直接引用参数
+        # 使用f可以直接使用{}引用参数
         url = f"https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={corpid}&corpsecret={corpsecret}"
         r = requests.get(url=url)
         # 使用json获取它的响应体
