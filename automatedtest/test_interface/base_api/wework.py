@@ -7,8 +7,11 @@
 import requests
 
 
-# 创建WeWork类（业务线）
-class WeWork:
+
+from test_interface.base_api.base_api import BaseApi
+
+# 创建WeWork类（业务线）,继承于BaseApi类
+class WeWork(BaseApi):
     def get_token(self,corpsecret):
         corpid = "ww2e51e84799d1f6f7"
         #corpsecret = "xMZ8h3PCTOGFp9TtjvWWfqtX--uwTdCPVcSmzRqRMn8"
