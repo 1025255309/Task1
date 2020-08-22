@@ -12,50 +12,49 @@ from ..base_api.wework import WeWork
 class Tag(WeWork):
     #
     def create_tag(self,tagname,tagid):
-        url = "https://qyapi.weixin.qq.com/cgi-bin/tag/create"
-        params = {
-            "access_token": self.token
+        req={
+            "method":"post",
+            "url":"https://qyapi.weixin.qq.com/cgi-bin/tag/create",
+            "params":{"access_token": self.token},
+            "json":{"tagname": tagname,"tagid": tagid}
         }
-        json = {
-            "tagname": tagname,
-            "tagid": tagid # 标签id，非负整型，指定此参数时新增的标签会生成对应的标签id，不指定时则以目前最大的id自增。
-        }
-        r = requests.post(url=url, params=params, json=json)
-        print(r.json())
-        return r.json()
+        r=self.send_api(req)
+        print(r)
+        return r
 
     def update_tagname(self,tagid,tagname):
-        url = "https://qyapi.weixin.qq.com/cgi-bin/tag/update"
-        params = {
-            "access_token": self.token
+        req={
+            "method":"post",
+            "url" :"https://qyapi.weixin.qq.com/cgi-bin/tag/update",
+            "params" : {"access_token": self.token},
+            "json" :{"tagid":tagid,"tagname":tagname}
         }
-        json = {
-            "tagid": tagid,
-            "tagname": tagname
-        }
-        r = requests.post(url=url, params=params, json=json)
-        print(r.json())
-        return r.json()
+        r = self.send_api(req)
+        print(r)
+        return r
 
     def delete_tag(self,tagid):
-        url = "https://qyapi.weixin.qq.com/cgi-bin/tag/delete"
-        params = {
-            "access_token": self.token,
-            "tagid": tagid
+        req={
+            "method": "post",
+            "url":"https://qyapi.weixin.qq.com/cgi-bin/tag/delete",
+            "params":{"access_token": self.token,"tagid": tagid}
         }
-        r = requests.get(url=url, params=params)
-        print(r.json())
-        return r.json()
+        r = self.send_api(req)
+        print(r)
+        return r
 
     def get_tagmember(self,tagid):
-        url = "https://qyapi.weixin.qq.com/cgi-bin/tag/get"
-        params = {
-            "access_token": self.token,
-            "tagid": tagid
+        req={
+            "method":"post",
+            "url":"https://qyapi.weixin.qq.com/cgi-bin/tag/get",
+            "params":{"access_token": self.token,"tagid": tagid}
         }
-        r = requests.get(url=url, params=params)
-        print(r.json())
-        return r.json()
+        r = self.send_api(req)
+        print(r)
+        return r
+
+
+
 
 
 
