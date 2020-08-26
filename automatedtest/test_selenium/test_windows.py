@@ -6,7 +6,6 @@
 。返回刚才的登录页，点击登录。输入用户名和密码，点击登录
 '''
 import pytest
-import selenium
 from selenium import webdriver
 from time import sleep
 class TestWindows:

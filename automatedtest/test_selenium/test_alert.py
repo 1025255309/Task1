@@ -10,10 +10,7 @@ https://www.runoob.com/try/try.php?filename=jqueryui-api-droppable
 import pytest
 from selenium import webdriver
 from time import sleep
-
 from selenium.webdriver import ActionChains
-
-
 class TestFrame:
     def setup(self):
         self.driver = webdriver.Chrome()
@@ -22,7 +19,6 @@ class TestFrame:
         self.driver.maximize_window()
     def teardown(self):
         self.driver.quit()
-
     def test_frame(self):
         # 检查要打印的元素，可以发现他们属于iframe元素，也就是需要先使用switch_to.frame("新frame的id")切换到对应的frame页
         self.driver.switch_to.frame("iframeResult")
@@ -39,6 +35,5 @@ class TestFrame:
         #self.driver.switch_to.parent_frame()  # 切换到父frame第二种方式，两种方式都可以
         self.driver.find_element_by_id("submitBTN").click()
         sleep(3)
-
 if __name__ == '__main__':
      pytest.main()

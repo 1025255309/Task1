@@ -17,7 +17,6 @@ class TestFrame:
         self.driver.maximize_window()
     def teardown(self):
         self.driver.quit()
-
     def test_frame(self):
         # 检查要打印的元素，可以发现他们属于iframe元素，也就是需要先使用switch_to.frame("新frame的id")切换到对应的frame页
         self.driver.switch_to.frame("iframeResult")
@@ -28,8 +27,6 @@ class TestFrame:
         self.driver.switch_to.default_content()  # 切换到默认frame，第一种方式
         #self.driver.switch_to.parent_frame()  # 切换到父frame第二种方式，两种方式都可以
         print(self.driver.find_element_by_id("submitBTN").text)
-
-
 
 if __name__ == '__main__':
      pytest.main()
