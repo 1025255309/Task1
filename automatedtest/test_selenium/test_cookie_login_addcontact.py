@@ -9,6 +9,10 @@ class TestCookie:
     def setup(self):
         self.driver = webdriver.Chrome()
         self.driver.get("https://work.weixin.qq.com/wework_admin/frame#index")
+
+    def teardown(self):
+        self.driver.quit()
+
     def test_get_cookie(self):
 
         sleep(6)
